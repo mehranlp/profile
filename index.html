@@ -7,43 +7,69 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
       background: #f9f9f9;
       color: #222;
       padding: 24px;
       border-radius: 10px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
     }
+
     h1 {
       text-align: center;
       margin-bottom: 32px;
       color: #2563eb;
     }
+
     section {
       margin-bottom: 36px;
     }
+
     h2 {
       color: #155189;
       border-bottom: 2px solid #c1e0ff;
       padding-bottom: 6px;
-      margin-bottom: 14px;
-    ul {
-      list-style: disc inside;
-      margin: 0;
-      padding: 0 0 0 18px;
+      margin-bottom: 16px;
     }
-    .project-link {
+
+    .project-card {
+      background: #ffffff;
+      border: 1px solid #e0e7ff;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
       color: #2563eb;
       text-decoration: none;
     }
-    .project-link:hover {
+
+    .project-title:hover {
       text-decoration: underline;
+    }
+
+    .project-description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
     }
   </style>
 </head>
 <body>
   <h1>Mehran's Profile and Projects</h1>
+
   <section id="about-me">
     <h2>About Me</h2>
     <p>
@@ -52,16 +78,24 @@
       I love building projects that solve real problems and enjoy learning new skills every day.
     </p>
   </section>
+
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <a class="project-link" href="https://maximumdrawdown.streamlit.app/" target="_blank">Profile</a> - My Maximum Drawdonw dashboard. Maximum drawdown shows how much an investment drops from its peak before recovering. It’s a key metric for understanding potential losses and how long recovery might take. My project visualizes this for assets like the S&P 500 and Bitcoin, showing how wealth grows with steady contributions while tracking drawdowns. It’s especially useful for comparing investment strategies, assessing risk, and making sure a strategy aligns with an investor’s long-term goals.
-      <li>
-        <a class="project-link" href="https://github.com/mehranlp/your-other-project" target="_blank">My portfolio optimization dashboard. 
-      </li>
-      <!-- Add more projects as you like -->
-    </ul>
+
+    <div class="project-card">
+      <a class="project-title" href="https://maximumdrawdown.streamlit.app/" target="_blank">Maximum Drawdown Dashboard</a>
+      <div class="project-description">
+        Maximum drawdown shows how much an investment drops from its peak before recovering. It’s a key metric for understanding potential losses and how long recovery might take. This project visualizes drawdown and wealth growth over time for assets like the S&P 500 and Bitcoin, using steady annual contributions. It’s especially helpful for comparing investment strategies, assessing risk tolerance, and evaluating long-term consistency across funds.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <a class="project-title" href="https://github.com/mehranlp/your-other-project" target="_blank">Portfolio Optimization Dashboard--comming soon!</a>
+      <div class="project-description">
+        A dashboard to model and visualize optimized investment portfolios based on risk-return profiles. Uses modern portfolio theory and historical data to identify efficient frontiers and guide asset allocation decisions.
+      </div>
+    </div>
+
   </section>
 </body>
 </html>
