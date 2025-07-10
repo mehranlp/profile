@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 40px auto;
-      background: #121212;
+      background: #2e2e2e; 
       color: #e0e0e0;
       padding: 24px;
       border-radius: 10px;
@@ -24,24 +24,14 @@
 
     h2 {
       color: #64b5f6;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #444;
       padding-bottom: 6px;
       margin-bottom: 16px;
     }
 
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px auto;
-      border: 2px solid #64b5f6;
-    }
-
     .project-card {
-      background: #1e1e1e;
-      border: 1px solid #333;
+      background: #3a3a3a;
+      border: 1px solid #555;
       padding: 16px 20px;
       margin-bottom: 18px;
       border-radius: 8px;
@@ -73,9 +63,9 @@
     }
 
     select {
-      background: #1e1e1e;
+      background: #3a3a3a;
       color: #e0e0e0;
-      border: 1px solid #333;
+      border: 1px solid #555;
       padding: 8px;
       border-radius: 5px;
       margin-bottom: 24px;
@@ -87,12 +77,13 @@
 <body>
   <h1>Mehran's Profile and Projects</h1>
 
-  <img src="your-profile-picture.jpg" alt="Profile Picture" class="profile-pic">
-
   <section id="about-me">
     <h2>About Me</h2>
     <p>
-      Hi! I'm Mehran, a finance professional with over eight years of experience specializing in investment management and risk oversight...
+      Hi! I'm Mehran, a finance professional with over eight years of experience specializing in investment management and risk oversight. I work with a wide range of financial instruments and modeling techniques, with a focus on fixed income and derivatives. Over the years, I've built advanced tools for analysis and reporting, using Python and SQL to handle complex data, improve portfolio insights, and support better risk management.
+    </p>
+    <p>
+      I enjoy building practical projects that solve real-world problems and am always eager to learn and grow in my work. I have a deep interest in leveraging data science to bring clarity to financial decision-making. In my recent projects, I’ve focused on automating performance tracking, visualizing portfolio metrics, and developing tools that make risk easier to understand and communicate. I’m particularly passionate about making finance more accessible and using code to uncover insights that inform smarter investment strategies.
     </p>
   </section>
 
@@ -111,14 +102,14 @@
     <div class="project-card">
       <a class="project-title" href="https://maximumdrawdown.streamlit.app/" target="_blank">Maximum Drawdown Dashboard</a>
       <div class="project-description">
-        Maximum drawdown shows how much an investment drops from its peak before recovering...
+        Maximum drawdown shows how much an investment drops from its peak before recovering. It’s a key metric for understanding potential losses and how long recovery might take. This project visualizes drawdown and wealth growth over time for assets like major US equity indexes, Global Equity, Gold, Global Fixed Income index, and Bitcoin, using steady annual contributions. It’s especially helpful for comparing investment strategies, assessing risk tolerance, and evaluating long-term consistency across funds.
       </div>
     </div>
 
     <div class="project-card">
       <a class="project-title" href="https://multiasset-mp.streamlit.app/" target="_blank">Multi-asset Portfolio Tool</a>
       <div class="project-description">
-        This interactive Streamlit app allows users to construct and analyze custom multi-asset portfolios...
+        This interactive Streamlit app allows users to construct and analyze custom multi-asset portfolios using popular ETFs. Users can select assets, adjust their portfolio weights with intuitive sliders, and visualize the resulting expected returns, volatility, and efficient frontier. The app also includes detailed visualizations such as daily return distributions, a correlation heatmap, and a backtest comparison against the SPY benchmark. Historical data is sourced from Yahoo Finance via the yfinance API, and key performance metrics such as realized return and risk are computed to aid investment decision-making. This tool demonstrates practical applications of financial data analysis, portfolio optimization, and interactive visualization in Python.
       </div>
     </div>
   </section>
