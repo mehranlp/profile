@@ -1,117 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mehran's Profile and Projects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#152d36" />
+  <meta name="description" content="Mehran Poormalek, CFA, FRM — independent systematic FX research and trading, investment analytics and risk management." />
+  <meta name="robots" content="index, follow" />
+  <title>Mehran Poormalek | Systematic FX Research</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #2e2e2e; 
-      color: #e0e0e0;
-      padding: 24px;
-      border-radius: 10px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 32px;
-      color: #90caf9;
-    }
-
-    h2 {
-      color: #64b5f6;
-      border-bottom: 2px solid #444;
-      padding-bottom: 6px;
-      margin-bottom: 16px;
-    }
-
-    .project-card {
-      background: #3a3a3a;
-      border: 1px solid #555;
-      padding: 16px 20px;
-      margin-bottom: 18px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
-    }
-
-    .project-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 6px;
-      color: #90caf9;
-      text-decoration: none;
-    }
-
-    .project-title:hover {
-      text-decoration: underline;
-    }
-
-    .project-description {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    select {
-      background: #3a3a3a;
-      color: #e0e0e0;
-      border: 1px solid #555;
-      padding: 8px;
-      border-radius: 5px;
-      margin-bottom: 24px;
-      display: block;
-      width: 100%;
-    }
+    :root{--ink:#20333a;--inksoft:#52636a;--forest:#183740;--paper:#f8f7f3;--white:#fff;--line:#e3e5df;--accent:#b29272;--accentstrong:#9e7956;--mint:#dae7df;--shadow:0 22px 65px rgba(20,45,45,.07)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #c19d74;outline-offset:4px}.skip{position:absolute;top:-100px;left:12px;padding:12px;background:white;z-index:100}.skip:focus{top:12px}
+    .container{width:min(1136px,calc(100% - 64px));margin-inline:auto}.topbar{position:relative;z-index:1;border-bottom:1px solid rgba(227,229,223,.75);background:rgba(248,247,243,.94)}
+    .nav{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.monogram{height:40px;width:40px;background:var(--forest);color:#fff;display:grid;place-items:center;font:600 16px Georgia,serif;letter-spacing:-.045em;border-radius:3px}.brand-copy{display:flex;flex-direction:column;gap:2px}.brand-copy strong{font-size:14px;letter-spacing:.035em}.brand-copy span{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#798785}
+    .navlinks{display:flex;align-items:center;gap:30px}.navlinks a{font-size:13px;text-decoration:none;color:#52666a;transition:color .18s}.navlinks a:hover{color:#102f39}.navlinks .nav-contact{color:#182f37;font-weight:650;border-bottom:1px solid #a88563;padding-bottom:5px}
+    .hero{padding:106px 0 103px;background:radial-gradient(ellipse at 85% 10%,#e5ece7 0%,transparent 48%),var(--paper)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.24fr) minmax(290px,.76fr);gap:80px;align-items:center}
+    .eyebrow{font-weight:650;letter-spacing:.20em;text-transform:uppercase;font-size:11px;color:#947255;display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";width:24px;height:1px;background:var(--accentstrong)}
+    h1,h2,h3,p{margin:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em}h1{font-size:clamp(45px,5vw,68px);line-height:1.13;margin:26px 0 24px;max-width:740px}h1 em{font-style:italic;color:#a07c5c}.hero .lede{font-size:17px;color:var(--inksoft);line-height:1.8;max-width:640px}
+    .actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:34px}.btn{border:1px solid var(--forest);display:inline-flex;align-items:center;gap:16px;text-decoration:none;padding:16px 23px;font-size:13px;font-weight:650;border-radius:3px;transition:transform .17s,background .17s,box-shadow .17s}.btn:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(20,45,45,.12)}.btn-primary{background:var(--forest);color:white}.btn-secondary{background:transparent;color:var(--forest)}.btn svg{width:16px;height:16px}
+    .hero-aside{position:relative;background:var(--forest);color:#f6f3ec;min-height:394px;padding:38px;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow);border-radius:3px}.hero-aside:before{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(233,240,234,.16);border-radius:50%;right:-125px;top:-130px;box-shadow:0 0 0 49px rgba(255,255,255,.025),0 0 0 97px rgba(255,255,255,.02)}.aside-eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#bed0c6;position:relative}.aside-main{position:relative;font:normal 28px/1.37 Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin-top:74px;max-width:260px}.aside-rule{height:1px;background:rgba(232,236,231,.28);margin:auto 0 22px}.aside-meta{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#bdcfc7;letter-spacing:.06em;gap:14px}
+    .facts{background:#eef1ed;border-block:1px solid #e3e7e2}.facts .container{display:grid;grid-template-columns:repeat(3,1fr)}.fact{padding:35px 28px 36px;border-right:1px solid #d8dfd9}.fact:first-child{padding-left:0}.fact:last-child{border-right:0}.fact strong{font:400 32px Georgia,serif;letter-spacing:-.04em;display:block;color:var(--forest)}.fact span{font-size:12px;color:#60716f;line-height:1.5;display:block;margin-top:7px}
+    section.content{padding:100px 0}.section-label{letter-spacing:.16em;text-transform:uppercase;color:#98785d;font-size:11px;font-weight:700;margin-bottom:21px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:45px;margin-bottom:42px}h2{font-size:clamp(32px,3.7vw,49px);line-height:1.2}.section-head p{color:var(--inksoft);max-width:380px;font-size:14px;line-height:1.8}
+    .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.approach{background:white;border:1px solid var(--line);padding:31px;min-height:235px;box-shadow:0 6px 20px rgba(21,40,36,.025)}.step{font:400 15px Georgia,serif;color:#9b7c62}.approach h3{font-size:19px;margin:28px 0 13px;font-weight:650;letter-spacing:-.02em}.approach p{font-size:13px;line-height:1.78;color:var(--inksoft)}
+    .track-wrap{background:#fff;padding:98px 0;border-block:1px solid #e8e8e4}.track-grid{display:grid;grid-template-columns:1fr;gap:42px;max-width:760px}.track-column{padding:26px 28px 27px;border-top:2px solid #b39b81;background:#fafbf8}.track-cap{font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.17em;color:#97775b}.track-period{font:400 26px Georgia,serif;letter-spacing:-.03em;margin-top:14px}.track-detail{line-height:1.75;color:#52636a;font-size:13px;margin-top:13px}.track-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;border-top:1px solid #e2e6df;margin-top:22px;padding-top:22px}.track-stat b{font:400 27px Georgia,serif;display:block}.track-stat span{display:block;color:#63726f;font-size:11px;margin-top:7px;line-height:1.5}.method-note{color:#657575;font-size:11px;line-height:1.75;margin-top:22px;max-width:970px}
+    .documents{background:#eff2ed;border-block:1px solid #e5e8e2}.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.doc{background:#fff;border:1px solid #e0e5df;text-decoration:none;padding:32px 32px 28px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .2s,transform .2s}.doc:hover{transform:translateY(-4px);box-shadow:0 13px 25px rgba(20,45,45,.09)}.doc-head{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#9e8466}.doc-head .type{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:650}.doc-head svg{width:20px;height:20px}.doc h3{font:400 28px Georgia,serif;letter-spacing:-.035em}.doc p{line-height:1.7;color:var(--inksoft);font-size:13px;flex:1}.doc .view{margin-top:10px;border-top:1px solid var(--line);padding-top:17px;font-weight:700;font-size:12px;color:#264249;display:flex;justify-content:space-between;gap:15px}
+    .contact{background:var(--forest);color:#f4f5ed;padding:95px 0}.contact-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:end}.contact .section-label{color:#c0a88c}.contact h2{max-width:690px}.contact p{margin-top:17px;max-width:620px;font-size:14px;color:#c5d4ce;line-height:1.8}.contact a.email{font:400 clamp(19px,2vw,27px) Georgia,serif;color:white;text-underline-offset:8px;text-decoration-color:#b39b7e;overflow-wrap:anywhere}.contact .email-wrap{text-align:right}
+    footer{background:#112830;color:#a9bfbb;font-size:11px;padding:24px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-row a{color:#dce8e3}
+    @media(max-width:900px){.hero-grid{gap:35px}.hero-aside{padding:29px;min-height:365px}.hero{padding:77px 0}.facts .container{grid-template-columns:repeat(2,1fr)}.fact:nth-child(3){border-right:0}.section-head{display:block}.section-head p{margin-top:20px}.contact-grid{display:block}.contact .email-wrap{text-align:left;margin-top:34px}}
+    @media(max-width:680px){.container{width:min(100% - 34px,1136px)}.nav{min-height:77px}.navlinks{gap:15px}.navlinks a:not(.nav-contact){display:none}.brand-copy span{font-size:9px}.hero{padding:63px 0}.hero-grid,.approach-grid,.track-grid,.doc-grid{grid-template-columns:1fr}.hero-grid{gap:36px}h1{font-size:45px}.hero .lede{font-size:15px}.hero-aside{min-height:295px}.aside-main{margin-top:46px}.facts .container{grid-template-columns:repeat(2,1fr)}.fact{padding:24px 14px}.fact strong{font-size:26px}.fact:first-child,.fact:nth-child(3){padding-left:0}.fact span{font-size:11px}section.content,.track-wrap,.contact{padding:72px 0}.section-head{margin-bottom:30px}.approach{min-height:0}.track-grid{gap:14px}.track-column{padding:23px}.doc{padding:26px}.footer-row{display:block}.footer-row span{display:block;margin-bottom:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
 </head>
 <body>
-  <h1>Mehran's Profile and Projects</h1>
-
-  <section id="about-me">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Mehran, a finance professional with over eight years of experience specializing in investment management and risk oversight. I work with a wide range of financial instruments and modeling techniques, with a focus on fixed income and derivatives. Over the years, I've built advanced tools for analysis and reporting, using Python and SQL to handle complex data, improve portfolio insights, and support better risk management.
-    </p>
-    <p>
-      I enjoy building practical projects that solve real-world problems and am always eager to learn and grow in my work. I have a deep interest in leveraging data science to bring clarity to financial decision-making. In my recent projects, I’ve focused on automating performance tracking, visualizing portfolio metrics, and developing tools that make risk easier to understand and communicate. I’m particularly passionate about making finance more accessible and using code to uncover insights that inform smarter investment strategies.
-    </p>
-  </section>
-
-  <section id="project-dropdown">
-    <h2>Select a Project</h2>
-    <select onchange="window.location.href=this.value">
-      <option disabled selected>Select a project...</option>
-      <option value="https://maximumdrawdown.streamlit.app/">Maximum Drawdown Dashboard</option>
-      <option value="https://multiasset-mp.streamlit.app/">Multi-asset Portfolio Tool</option>
-    </select>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-      <a class="project-title" href="https://maximumdrawdown.streamlit.app/" target="_blank">Maximum Drawdown Dashboard</a>
-      <div class="project-description">
-        Maximum drawdown shows how much an investment drops from its peak before recovering. It’s a key metric for understanding potential losses and how long recovery might take. This project visualizes drawdown and wealth growth over time for assets like major US equity indexes, Global Equity, Gold, Global Fixed Income index, and Bitcoin, using steady annual contributions. It’s especially helpful for comparing investment strategies, assessing risk tolerance, and evaluating long-term consistency across funds.
-      </div>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Mehran Poormalek homepage">
+        <span class="monogram" aria-hidden="true">MP</span>
+        <span class="brand-copy"><strong>Mehran Poormalek</strong><span>CFA · FRM</span></span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation"><a href="#approach">Approach</a><a href="#documents">Documents</a><a class="nav-contact" href="#contact">Contact</a></nav>
     </div>
-
-    <div class="project-card">
-      <a class="project-title" href="https://multiasset-mp.streamlit.app/" target="_blank">Multi-asset Portfolio Tool</a>
-      <div class="project-description">
-        This interactive Streamlit app allows users to construct and analyze custom multi-asset portfolios using popular ETFs. Users can select assets, adjust their portfolio weights with intuitive sliders, and visualize the resulting expected returns, volatility, and efficient frontier. The app also includes detailed visualizations such as daily return distributions, a correlation heatmap, and a backtest comparison against the SPY benchmark. Historical data is sourced from Yahoo Finance via the yfinance API, and key performance metrics such as realized return and risk are computed to aid investment decision-making. This tool demonstrates practical applications of financial data analysis, portfolio optimization, and interactive visualization in Python.
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Systematic FX · Investment research</p>
+          <h1>A quantitative approach to <em>FX and Rates trading.</em></h1>
+          <p class="lede">I’m Mehran Poormalek, CFA, FRM. My background spans investment analytics, financial risk, and currency markets. I’ve developed and live-traded an automated FX strategy, focused on risk management and capital preservation.</p>
+          <div class="actions"><a class="btn btn-primary" href="documents/Systematic_FX_Strategy_Summary.pdf" target="_blank" rel="noopener">Explore the strategy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a><a class="btn btn-secondary" href="documents/Mehran_Poormalek_CV.pdf" target="_blank" rel="noopener">View CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 4h12v16H4V8z"/><path d="M8 4v4H4"/></svg></a></div>
+        </div>
+        <aside class="hero-aside" aria-label="Research focus">
+          <p class="aside-eyebrow">Research philosophy</p>
+          <p class="aside-main">Systematic execution.<br>Measured risk.<br>Informed discretion.</p>
+          <div class="aside-rule"></div>
+          <div class="aside-meta"><span>Spot foreign exchange</span><span>Short-term horizon</span></div>
+        </aside>
       </div>
-    </div>
-  </section>
-</body>
-</html>
+    </section>
+    <div class="facts"><div class="container">
+      <div class="fact"><strong>16 years</strong><span>Historical strategy backtesting</span></div>
+      <div class="fact"><strong>10+ years</strong><span>Monitoring and analyzing FX and Rates markets</span></div>
+      <div class="fact"><strong>Daily</strong><span>Trading frequency</span></div>
+    </div></div>
+    <section class="content" id="approach"><div class="container">
+      <div class="section-label">The approach</div>
+      <div class="section-head"><h2>Built around process and risk.</h2><p>The strategy combines systematic signals with explicit risk appetite decisions and ongoing oversight. The objective is a repeatable process—not a discretionary trade-by-trade narrative.</p></div>
+      <div class="approach-grid">
+        <article class="approach"><span class="step">01 / Research</span><h3>Independent development</h3><p>Designed and tested on historical spot FX data, with a documented backtest separate from subsequent live trading results.</p></article>
+        <article class="approach"><span class="step">02 / Execution</span><h3>Automated trading</h3><p>Fully automated execution with a daily trading frequency and positions may be held for several days, depending on market regime.</p></article>
+        <article class="approach"><span class="step">03 / Oversight</span><h3>Dynamic risk management</h3><p>Volatility-aware position sizing and discretionary adjustments to risk appetite, concentration, and exposure around important events.</p></article>
+      </div>
+    </div></section>
+    <section class="track-wrap" id="performance"><div class="container">
+      <div class="section-label">Performance record</div>
+      <div class="section-head"><h2>Historical backtest</h2><p>The historical simulation is summarized below. Live trading results, performance measures, and limitations are included in the strategy PDF.</p></div>
+      <div class="track-grid">
+        <div class="track-column"><div class="track-cap">Historical simulation · Jun 2010 – Jun 2026</div><div class="track-period">Long-horizon backtest</div><p class="track-detail">Approximately 16 years of simulated FX trading, before the discretionary overlays used in live trading.</p><div class="track-stats"><div class="track-stat"><b>36.9%</b><span>Annualized compounded return (simulated)</span></div><div class="track-stat"><b>1.1</b><span>Zero-benchmark Annualized Sharpe</span></div></div></div>
+      </div>
+    </div></section>
+    <section class="content documents" id="documents"><div class="container">
+      <div class="section-label">Documents</div><div class="section-head"><h2>Additional detail.</h2><p>Concise, downloadable summaries. Proprietary model signals, trade rules, source code, and raw brokerage records are not published here.</p></div>
+      <div class="doc-grid">
+        <a class="doc" href="documents/Mehran_Poormalek_CV.pdf" target="_blank" rel="noopener" aria-label="Open Mehran Poormalek CV PDF"><span class="doc-head"><span class="type">PDF · CV</span><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" aria-hidden="true"><path d="M4 11V4h7M20 13v7h-7M4 4l7 7m9 9-7-7"/></svg></span><h3>Curriculum vitae</h3><p>Professional experience, financial qualifications, quantitative research, and trading development.</p><span class="view">Open CV <span aria-hidden="true">↗</span></span></a>
+        <a class="doc" href="documents/Systematic_FX_Strategy_Summary.pdf" target="_blank" rel="noopener" aria-label="Open systematic FX strategy summary PDF"><span class="doc-head"><span class="type">PDF · Strategy</span><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" aria-hidden="true"><path d="M4 11V4h7M20 13v7h-7M4 4l7 7m9 9-7-7"/></svg></span><h3>Strategy summary</h3><p>Research methodology, separated backtest and live metrics, cash-flow adjustments, and discretionary risk framework.</p><span class="view">Open strategy summary <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </div></section>
+    <section class="contact" id="contact"><div class="container contact-grid"><div><div class="section-label">Get in touch</div><h2>Open to a conversation about FX and Rates research and trading.</h2><p>I’m happy to discuss the strategy, my professional background, and potential opportunities. Further implementation details can be shared in an appropriate setting.</p></div><div class="email-wrap"><a class="email" href="mailto:Mehran.p@gmail.com">Mehran.p@gmail.com</a></div></div></section>
+  </main>
+  <footer><div class="container footer-row"><span>© 2026 Mehran Poormalek </span></div></footer>
+</body></html>
